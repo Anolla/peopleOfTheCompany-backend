@@ -2,7 +2,7 @@
 
 const express = require("express");
 const employeesRouter = express.Router();
-const Employees = require("../models/index");
+const { Employees } = require("../models/index");
 const faker = require("faker");
 
 // getting employees
