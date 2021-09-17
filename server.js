@@ -6,6 +6,8 @@ const { db } = require("./models/index");
 const errorHandler = require("./errorHandlers/500");
 const notFound = require("./errorHandlers/404");
 const employeesRoutes = require("./routes/employees.js");
+const  departmentsRouter = require("./routes/departments.js");
+
 
 // prepare the express app
 const express = require("express");
@@ -17,7 +19,7 @@ app.use(cors());
 
 //routes
 app.use(employeesRoutes);
-// app.use(departmentsRouter);
+app.use(departmentsRouter);
 
 // Catchalls
 app.use(notFound);
