@@ -1,6 +1,6 @@
 # peopleOfTheCompany-backend
 
-[Deployed link]()
+[Deployed link](https://people-of-the-company.herokuapp.com/)
 
 #### To run the app
 - npm start

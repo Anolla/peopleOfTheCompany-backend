@@ -15,7 +15,7 @@ const departments = departmentsModel(sequelize, DataTypes);
 employees.belongsTo(departments);
 
 const DataCollection = require("../models/dataCollection");
-const EmployeesCollection = new DataCollection(employees);
+const EmployeesCollection = new DataCollection(employees, departments);
 const DepartmentsCollection = new DataCollection(departments);
 
 module.exports = {
