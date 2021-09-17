@@ -25,7 +25,7 @@ employeesRouter.post("/employees", async (req, res) => {
       email: faker.internet.email(),
       departmentId: departmentId,
     });
-    createdRecords.push(createdRecord);
+    createdRecords.unshift(createdRecord);
   }
   res.status(201).send(createdRecords);
 });
