@@ -3,12 +3,13 @@
 // It takes in a schema in the constructor and uses that instead of every collection
 // being the same and requiring their own schema.
 class DataCollection {
-  constructor(model) {
+  constructor(model, departmentModel = "") {
     this.model = model;
+    this.departmentModel = departmentModel;
   }
 
-  get(id) {
-    return this.model.findAll({});
+  get() {
+    return this.model.findAll({ include: this.departmentModel });
   }
 
   create(record) {
