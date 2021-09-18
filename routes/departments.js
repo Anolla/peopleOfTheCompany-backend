@@ -24,13 +24,6 @@ departmentsRouter.get("/departments", async (req, res) => {
   }
 });
 
-// getting a specific department
-departmentsRouter.get("/department/:id?", async (req, res) => {
-  const id = req.params.id;
-  let theRecord = await Departments.get(id);
-  res.status(200).json(theRecord);
-});
-
 // adding departments
 departmentsRouter.post("/departments", async (req, res) => {
   let departmentsSaved = [];

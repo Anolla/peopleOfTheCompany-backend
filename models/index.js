@@ -9,9 +9,11 @@ const sequelize = new Sequelize(
   {}
 );
 
+//creating models
 const employees = employeesModel(sequelize, DataTypes);
 const departments = departmentsModel(sequelize, DataTypes);
 
+//creating a relation for the join
 employees.belongsTo(departments);
 
 const DataCollection = require("../models/dataCollection");
